@@ -4,6 +4,9 @@ __pycache__/
 *.pyo
 *.pyd
 
+.DS_Store
+**/.DS_Store
+
 .vendor_git_metadata/
 .ipynb_checkpoints/
 
