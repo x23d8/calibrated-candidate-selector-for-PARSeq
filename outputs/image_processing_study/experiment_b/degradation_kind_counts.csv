@@ -1,0 +1,5 @@
+kind,count
+gaussian_blur,97
+gaussian_noise,94
+defocus_blur,93
+motion_blur,83

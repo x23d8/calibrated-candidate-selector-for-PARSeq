@@ -1,0 +1,12 @@
+{
+  "num_records": 367,
+  "ocr_model_used": "outputs/image_processing_study/experiment_a/raw/best_model.pt",
+  "restoration_methods": [
+    "median_denoise",
+    "bilateral_denoise",
+    "wavelet_denoise",
+    "homomorphic",
+    "wiener_restore"
+  ],
+  "include_rl": true
+}
