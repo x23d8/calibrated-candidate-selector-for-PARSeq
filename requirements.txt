@@ -2,6 +2,8 @@ torch
 torchvision
 numpy
 pandas
+scikit-learn
+joblib
 Pillow
 opencv-python
 matplotlib

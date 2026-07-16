@@ -10,3 +10,9 @@ __pycache__/
 parseq/.git/
 parseq/**/.git/
 dataset
+
+# Phase 7 external holdout images are local evaluation data; keep manifest/audit tracked.
+reinforcement_learning/
+word_reorganizer
+refinement_finetune/*phase3*
+rl_restoration
