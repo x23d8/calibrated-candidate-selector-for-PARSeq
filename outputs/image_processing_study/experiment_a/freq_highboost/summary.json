@@ -1,0 +1,39 @@
+{
+  "method": "freq_highboost",
+  "chapter": "2.5 Frequency-domain filtering",
+  "description": "High-boost filtering via FFT Gaussian high-pass mask.",
+  "config": {
+    "output_dir": "/content/project/outputs/image_processing_study/experiment_a",
+    "epochs": 100,
+    "patience": 10,
+    "batch_size": 64,
+    "num_workers": 0,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "grad_clip": 5.0,
+    "seed": 42,
+    "split_seed": 42,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "limit_train": null,
+    "limit_val": null,
+    "limit_test": null
+  },
+  "best_val_exact": 0.547683923705722,
+  "best_epoch": 42,
+  "epochs_run": 52,
+  "early_stopped": true,
+  "test_metrics": {
+    "split": "test",
+    "samples": 367,
+    "exact_acc": 0.5340599455040872,
+    "cer": 0.09214795587280987,
+    "char_acc": 0.9078520441271901
+  },
+  "dataset_sizes": {
+    "train": 2944,
+    "val": 367,
+    "test": 367
+  },
+  "num_params": 2189221
+}

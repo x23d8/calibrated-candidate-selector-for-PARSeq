@@ -1,0 +1,39 @@
+{
+  "method": "otsu_binary",
+  "chapter": "1.2 Binary image processing",
+  "description": "Otsu global thresholding to a binary image.",
+  "config": {
+    "output_dir": "/content/project/outputs/image_processing_study/experiment_a",
+    "epochs": 100,
+    "patience": 10,
+    "batch_size": 64,
+    "num_workers": 0,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "grad_clip": 5.0,
+    "seed": 42,
+    "split_seed": 42,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "limit_train": null,
+    "limit_val": null,
+    "limit_test": null
+  },
+  "best_val_exact": 0.3896457765667575,
+  "best_epoch": 46,
+  "epochs_run": 56,
+  "early_stopped": true,
+  "test_metrics": {
+    "split": "test",
+    "samples": 367,
+    "exact_acc": 0.41689373297002724,
+    "cer": 0.208955223880597,
+    "char_acc": 0.791044776119403
+  },
+  "dataset_sizes": {
+    "train": 2944,
+    "val": 367,
+    "test": 367
+  },
+  "num_params": 2189221
+}

@@ -1,0 +1,39 @@
+{
+  "method": "bilateral_denoise",
+  "chapter": "2.2 Nonlinear filtering",
+  "description": "Bilateral filter (edge-preserving smoothing).",
+  "config": {
+    "output_dir": "/content/project/outputs/image_processing_study/experiment_a",
+    "epochs": 100,
+    "patience": 10,
+    "batch_size": 64,
+    "num_workers": 0,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "grad_clip": 5.0,
+    "seed": 42,
+    "split_seed": 42,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "limit_train": null,
+    "limit_val": null,
+    "limit_test": null
+  },
+  "best_val_exact": 0.6539509536784741,
+  "best_epoch": 86,
+  "epochs_run": 96,
+  "early_stopped": true,
+  "test_metrics": {
+    "split": "test",
+    "samples": 367,
+    "exact_acc": 0.6485013623978202,
+    "cer": 0.06262167423750811,
+    "char_acc": 0.9373783257624919
+  },
+  "dataset_sizes": {
+    "train": 2944,
+    "val": 367,
+    "test": 367
+  },
+  "num_params": 2189221
+}
