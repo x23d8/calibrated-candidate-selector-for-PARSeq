@@ -1,16 +1,5 @@
----
-title: Improve ANPR accuracy of PARSeq model using calibrated candidate selector
-emoji: 🚘
-colorFrom: indigo
-colorTo: blue
-sdk: docker
-app_port: 7860
-suggested_hardware: cpu-basic
-fullWidth: true
-short_description: Detect and recognize Vietnamese license plates with PARSeq.
----
 
-# PARSeq Official ANPR Pipeline
+# Improve ANPR accuracy of PARSeq model using calibrated candidate selector pipeline
 
 Phần reinforcement learning đã được tách sang project độc lập `D:\NEO\rl_pipeline`. Repository này chỉ còn giữ image-processing/PARSeq nền và các NTFS junction tương thích để absolute path trong audit RL lịch sử không bị hỏng.
 
