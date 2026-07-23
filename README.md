@@ -1,33 +1,13 @@
----
-title: PARSeq Vietnamese ANPR Demo
-emoji: 🚘
-colorFrom: indigo
-colorTo: blue
-sdk: docker
-app_port: 7860
-suggested_hardware: cpu-basic
-fullWidth: true
-short_description: Detect, restore and recognize Vietnamese license plates with PARSeq and PixelRL.
----
 
-# PARSeq ANPR: Calibrated Candidate Selector + PixelRL
+# Improve ANPR accuracy of PARSeq model using calibrated candidate selector pipeline
 
-Đây là repo của **calibrated candidate selector**, đồng thời là điểm chạy demo tích hợp cho hệ thống nhận dạng biển số gồm:
+Pipeline nhận diện ký tự biển số xe Việt Nam bằng PARSeq chính thức, gồm fine-tune, đánh giá iterative refinement, thử nghiệm tiền xử lý ảnh, benchmark các mô hình enhancement dùng weight chính chủ và demo web inference.
 
-- YOLO phát hiện và cắt biển số từ ảnh cảnh.
-- Các pipeline xử lý ảnh tạo nhiều candidate.
-- PARSeq nhận dạng từng candidate.
-- Calibrated candidate selector chọn kết quả OCR đáng tin cậy.
-- PixelRL/A2C phục hồi ảnh theo từng pixel trước khi đưa vào PARSeq.
+Mục tiêu của repo là kiểm tra các cách cải thiện `exact match` và `character accuracy` trước khi đưa ảnh vào PARSeq, đồng thời giữ quy trình đánh giá tách bạch giữa validation và test.
 
-Hệ thống đầy đủ được chia thành hai repo:
+## 1. Tổng quan
 
-1. [x23d8/calibrated-candidate-selector-for-PARSeq](https://github.com/x23d8/calibrated-candidate-selector-for-PARSeq) — PARSeq, fine-tuning, 65-view inference, calibrated selector, detector và web demo.
-2. [x23d8/PixelRL-PARSeq](https://github.com/x23d8/PixelRL-PARSeq) — PixelRL/A2C, các policy RL, trajectory cache và các artifact phục vụ demo.
-
-## Quan hệ dependency giữa hai repo
-
-Hai repo là **dependency của nhau ở mức mã nguồn, checkpoint và artifact**, không phải circular dependency giữa hai package trên PyPI.
+Luồng xử lý chính:
 
 ```text
 calibrated-candidate-selector-for-PARSeq
